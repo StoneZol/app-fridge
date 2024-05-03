@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+html {
+    background-color: #212529;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+footer {
+    text-align: center;
+    background: #212529;
+    color: aliceblue;
   }
+
+.btn {
+    &:active,
+    &:focus {
+        box-shadow: none !important;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link a {
+    color: aliceblue;
+    &:hover{
+        color:#0d6efd;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-brand a {
+    color:aliceblue !important;
+    font-size: 2rem;
+    &:hover{
+        color:#0d6efd;
+    }
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.form-select {
+    border: none;
+    &:active,
+    &:focus {
+        box-shadow: none !important;
+    }
 }
+
+.form-control {
+    &:active,
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+.AuthForms{
+    width: 100vw;
+    height: 80vh;
+  }
+  
+  .AuthInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:30%;
+    min-width: 300px;
+  }
+  
+  .AuthInput {
+    margin: 3px;
+  }
+  
+  .login_btn{
+    border-color: #050c26;
+    width:100%;
+  }
+  
+  .AuthFormBoarder{
+    background-color: #212529;
+    width: 100vw;
+    height: 50vh;
+  }
+
+  @media (max-width: 480px){
+    .AuthFormBoarder{
+        height: 30vh;
+      }
+  }
+  
+  input:invalid {
+    border: 2px dashed #0d6efd;
+  }
+  
+  input:valid {
+    border: 2px solid black;
+  }
