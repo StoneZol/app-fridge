@@ -3,7 +3,7 @@ import axios from "axios"
 
 async function createProduct(userData){
     try{
-        const response = await axios.post(`https://jsonplaceholder.typicode.com/posts`, userData)  //http://localhost:5126/api/Product/create?  https://jsonplaceholder.typicode.com/posts  
+        const response = await axios.post(`https://jsonplaceholder.typicode.com/posts`, userData)  //http://localhost:5126/api/Product/create?  https://jsonplaceholder.typicode.com/posts 
         await console.log(response)
         return response.data;
     } catch (error) {
