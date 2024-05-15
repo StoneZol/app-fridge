@@ -1,4 +1,212 @@
-html {
+/*! Base start */
+:root{
+  --color-head-bg: #111314;
+  --color-bg: #212529;
+  --color-form-bg: #16191b;
+  --color-text: aliceblue;
+  --hover-link-color: #ff295f;
+}
+
+.LightTheme{
+
+}
+
+body {
+  background-color: var(--color-bg);
+}
+
+a:hover{
+  color: var(--color-text);
+}
+
+button:hover{
+  background-color: var(--hover-link-color);
+  color: var(--color-text);
+}
+
+@media (hover: hover){
+  a:hover{
+    color: var(--color-text);
+  }
+  
+  button:hover{
+    background-color: var(--hover-link-color);
+    color: var(--color-text);
+  } 
+}
+
+@media (hover: none){
+  a:hover{
+    color: var(--color-text);
+  }
+  
+  button:hover{
+    background-color: var(--hover-link-color);
+    color: var(--color-text);
+  } 
+}
+
+/*! Base end */
+/** header start */
+/*? header media*/ 
+@media (max-width: 720px){
+  .BrandBox{
+    width: 719px;
+  }
+  
+  .SearchBox {
+    width: 719px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .RegAuth{
+    width: 719px;
+  }
+}
+/*? */
+
+  .Navigator{
+    background-color: var(--color-head-bg);
+    width: 100%;
+    min-width: 300px;
+  }
+
+  .NavigatorBox {
+    min-width: 300px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  
+  .BrandBox{
+    min-width: 200px;
+    height:70px;
+    margin-left: 20px;
+    font-size: 3rem;
+    align-content: center;
+    justify-content: center;
+    flex-grow: 3;
+  }
+  
+  .SearchBox {
+    min-width: 240px;
+    height: 70px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .RegAuth{
+    min-width: 140px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding-right: 20px;
+  }
+
+  .Navigator a {
+    text-decoration: none;
+    color: var(--color-text);
+    &:hover {
+      color: var(--hover-link-color)
+    }
+  }
+
+.NavInput{
+  height: 36px;
+  width: 180px;
+  border-color: var(--color-text);
+  background-color: var(--color-text);
+  border-radius: 1rem;
+  padding: 1px 10px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.SearchButt {
+  background-color: var(--color-text);
+  padding: 1px 2px;
+  border-radius: 1rem;
+  border-color: var(--color-text);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+/** header end */
+
+/*!RegAuth forms */
+.Authform {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .AuthFormBoarder{
+  width: 40%;
+  min-width: 300px;
+
+ }
+.AuthInputs {
+  background-color: var(--color-form-bg);
+  height: 20vh;
+  border-radius: 2rem;
+  border: var(--color-text) solid 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.AuthInputs > input {
+  width: 200px;
+  min-width: 200px;  height: 36px;
+  border-color: var(--color-text);
+  background-color: var(--color-text);
+  border-radius: 1rem;
+  padding: 1px 10px;
+  margin-bottom: 10px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.AuthInputs > button {
+  width: 200px;
+  background-color: var(--color-text);
+  padding: 1px 2px;
+  border-radius: 1rem;
+  border-color: var(--color-text);
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  &:hover {
+    background-color: var(--hover-link-color);
+  }
+}
+
+/*! */
+
+
+
+
+
+/*? ------------------------------------------------- */
+/* html {
     background-color: #212529;
 }
 
@@ -90,4 +298,4 @@ a {
   
   input:valid {
     border: 2px solid black;
-  }
+  } */

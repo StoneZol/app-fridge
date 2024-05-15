@@ -1,6 +1,7 @@
 import React from "react";
 import Swal from 'sweetalert2';
 import sha256 from "js-sha256";
+import {Link} from "react-router-dom";
 
 export default function RegForm() {
     const [password, setPassword] = React.useState('');
@@ -26,19 +27,19 @@ export default function RegForm() {
     }
 
     return (
-        <div className="Authform d-flex">
-            <div className="AuthFormBoarder d-flex justify-content-center">
-                <div className="AuthInputs">
+        <div className="Authform">
+            <div className="AuthFormBoarder">
+                <form className="AuthInputs" novalidate>
                     <input
-                        className="form-control mr-2 AuthInput UserName"
-                        placeholder="Username"
-                        aria-label="Username"
+                        className="AuthInput UserName"
+                        type="email"
+                        placeholder="Email"
+                        aria-label="email"
                         value={userName}
                         onChange={handlerUserNameChange}
-                        required="required"
-                        minlength="6"></input>
+                        required="required"></input>
                     <input
-                        className="form-control mr-2 AuthInput Password"
+                        className="AuthInput Password"
                         type="password"
                         placeholder="Password"
                         value={password}
@@ -47,11 +48,11 @@ export default function RegForm() {
                         required="required"
                         minlength="8"></input>
                     <button
-                        class="btn btn-primary login_btn AuthInput"
+                        class="AuthInput"
                         type="submit"
                         onClick={handlerLoginClick}>
-                        Registration</button>
-                </div>
+                        Регистрация</button>
+                </form>
             </div>
         </div>
     )

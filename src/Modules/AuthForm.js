@@ -20,25 +20,25 @@ export default function AuthForm() {
             Swal.fire({title: "Success", text: hash, icon: "success"});
         } else {
             Swal.fire(
-                {title: "Error!", text: "Check correct Username or Password", icon: "error"}
+                {title: "Error!", text: "Check correct Username or Password", icon: "error", allowOutsideClick: false,}
             );
         }
     }
 
     return (
-        <div className="Authform d-flex">
-            <div className="AuthFormBoarder d-flex justify-content-center">
-                <div className="AuthInputs">
+        <div className="Authform">
+            <div className="AuthFormBoarder">
+                <form className="AuthInputs" >
                     <input
-                        className="form-control mr-2 AuthInput UserName"
-                        placeholder="Username"
-                        aria-label="Username"
+                        className="AuthInput UserName"
+                        type="email"
+                        placeholder="Email"
+                        aria-label="email"
                         value={userName}
                         onChange={handlerUserNameChange}
-                        required="required"
-                        minlength="6"></input>
+                        required="required"></input>
                     <input
-                        className="form-control mr-2 AuthInput Password"
+                        className="AuthInput Password"
                         type="password"
                         placeholder="Password"
                         value={password}
@@ -47,11 +47,11 @@ export default function AuthForm() {
                         required="required"
                         minlength="8"></input>
                     <button
-                        class="btn btn-primary login_btn AuthInput"
+                        class="AuthInput"
                         type="submit"
                         onClick={handlerLoginClick}>
                         Login</button>
-                </div>
+                </form>
             </div>
         </div>
     )
